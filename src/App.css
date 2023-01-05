@@ -1,0 +1,442 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500&display=swap");
+
+* {
+  margin: 0%;
+  padding: 0%;
+  font-family: "Source Serif 4", serif;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+.header {
+  height: 100px;
+  width: 100%;
+  background-color: rgb(16, 16, 16);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header img {
+  height: 100px;
+  padding: 2rem;
+}
+
+.header-links {
+  width: 100%;
+  margin-left: 65px;
+}
+
+.header-links a {
+  color: white;
+  padding: 1rem;
+  list-style: none;
+  text-decoration: none;
+  font-size: 19px;
+  font-weight: 200;
+  cursor: pointer;
+}
+
+.header-links a:hover {
+  color: rgb(205, 102, 102);
+  text-shadow: 1px 1px 1px rgb(165, 148, 148);
+}
+
+.search-logo {
+  color: white;
+  padding-right: 3rem;
+  font-size: 23px;
+  font-weight: 600;
+  padding-left: 1rem;
+}
+
+.search-logo:hover {
+  color: grey;
+  cursor: pointer;
+}
+.search-input {
+  padding: 7px;
+  width: 28%;
+  border-radius: 8px;
+}
+
+.search-input::placeholder {
+  color: rgb(97, 79, 79);
+}
+
+/* ?????????????????????????????????? Home???????????????????????????????? */
+
+.banner {
+  height: 600px;
+  background-color: rgb(16, 16, 16);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 3rem;
+  box-sizing: border-box;
+}
+
+.banner::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  background: rgb(16, 16, 16);
+  opacity: 0.4;
+}
+
+.banner h1 {
+  color: white;
+  font-size: 3rem;
+  width: 40%;
+  z-index: 10;
+}
+
+.banner p {
+  color: white;
+  font-size: 3rem;
+  width: 40%;
+  z-index: 10;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  word-spacing: 3px;
+  font-weight: 100;
+}
+
+.mainDiv h4 {
+  font-size: 22px;
+  background-color: rgb(16, 16, 16);
+  color: white;
+  padding-left: 1rem;
+  font-weight: 600;
+  padding-top: 22px;
+  height: 3rem;
+}
+
+.ske-cards {
+  display: inline-block;
+  transition: transform 0.2s;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 1rem;
+  cursor: pointer;
+  min-width: 200px;
+  height: 300px;
+  z-index: 0;
+  border: 1px solid rgb(99, 99, 99);
+}
+
+.main-cards {
+  width: 100%;
+  background-color: rgb(16, 16, 16);
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: transform 0.5s;
+  display: flex;
+  overflow: auto;
+  overflow-x: scroll;
+  /* position: relative; */
+  height: 400px;
+}
+.cards {
+  width: 100%;
+  background-color: rgb(16, 16, 16);
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: transform 0.5s;
+  display: flex;
+  overflow: auto;
+  overflow-x: scroll;
+  position: relative;
+}
+
+.cards:hover {
+  /* transform: translateY(-10px) scale(20px); */
+  transform: scale(1.2);
+  z-index: 1000;
+}
+
+.cards img {
+  width: 200px;
+  border-radius: 10px;
+  z-index: 0;
+  height: 300px;
+  margin: 1rem;
+}
+
+.card-overlay {
+  width: 88%;
+  position: absolute;
+  bottom: 0px;
+  padding: 1.5rem;
+  padding-top: 3rem;
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(rgb(0, 0, 0, 0), rgb(0, 0, 0, 1));
+  opacity: 0;
+  transition: opacity 0.2s;
+  color: white;
+}
+
+.card-overlay:hover {
+  opacity: 1;
+  transform: translateY(-10px);
+}
+
+.card-title {
+  font-size: 23px;
+  font-weight: 700;
+}
+
+.card-date {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.card-overview {
+  font-size: 15px;
+}
+
+.genre {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  overflow: auto;
+  overflow-x: scroll;
+  background-color: rgb(16, 16, 16);
+  align-items: center;
+}
+
+.genre a {
+  min-width: 8rem;
+  text-align: center;
+  color: black;
+  border-radius: 5px;
+  background-color: white;
+  text-decoration: none;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.genre a:hover {
+  background-color: rgb(214, 233, 233);
+}
+
+.moviestype {
+  background-color: rgb(16, 16, 16);
+  width: 100%;
+  height: 100vh;
+}
+
+.moviestype h2{
+  color: white;
+  font-size: 3rem;
+  width: 40%;
+  z-index: 10;
+  padding: 1rem;
+  margin-left: 2rem;
+}
+
+.searchBtn{
+  padding: 10px 32px;
+  font-size: 23px;
+  border-radius: 6px;
+  background-color: #a4a9b0;
+  color: white;
+  text-align: center;
+  display: flex;
+  margin: auto;
+  cursor: pointer;
+}
+
+.error-maindiv{
+  display: flex;
+  background-color: rgb(16, 16, 16);
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  /* align-items: center; */
+  padding-top: 16%;
+
+}
+.error-div1{
+  width: 500px;
+    height: 250px;
+    border-radius: 6px;
+    background-color: grey;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    flex-direction: column;
+}
+
+
+
+.deleteicon{
+  /* display: flex; */
+  font-size: 37px;
+  padding: 1rem;
+  /* flex-direction: row; */
+}
+
+
+.movie {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  background-color: rgb(16, 16, 16);
+}
+
+.movie__intro {
+  width: 100%;
+}
+
+.movie__backdrop {
+  width: 100%;
+  height: 500px;
+  object-fit:cover;
+  object-position: 0 35%;
+}
+
+.movie__detail {
+  align-items: center;
+  width: 75%;
+  display: flex;
+  position: relative;
+  bottom: 225px;
+}
+
+.movie__detailLeft {
+  margin-right: 30px;
+}
+
+.movie__poster {
+  width:300px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.86) 0px 22px 40px 6px;
+}
+
+.movie__detailRight {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  height: 450px;
+  justify-content:space-between ;
+}
+
+.movie__detailRightTop > div{
+  text-shadow: 0px 0px 5px #000000;
+  margin-bottom: .5rem;
+}
+
+.movie__name {
+  font-weight: 600;
+  font-size: 3rem;
+}
+
+.movie__voteCount {
+  margin-left: 1rem;
+}
+
+.movie__genres {
+  margin: 1.25rem 0;
+}
+
+.movie__genre {
+  padding: .5rem;
+  border: 2px solid white;
+  border-radius: 20px;
+  margin-right: 1rem;
+}
+
+
+.movie__detailRightBottom {
+  margin: 2rem 0;
+  flex: 0.8;
+}
+
+.synopsisText {
+  font-size: 1.5rem;
+  margin-bottom: 1.25rem;
+  font-weight: 600;
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+.synopsisText > div:last-of-type {
+  margin-left: auto;
+}
+
+.movie__links {
+  position: relative;
+  bottom: 120px;
+  display: flex;
+  justify-content: space-between;
+  width: 75%;
+}
+
+.movie__heading {
+  font-size: 2.2rem;
+}
+
+.movie__Button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8rem 2rem;
+  border-radius: 20px;
+  cursor: pointer;
+  width: 150px;
+  color: black;
+  font-weight: bold;
+}
+
+.movie__homeButton {
+  background-color:rgb(255, 0, 0);
+  
+}
+
+.movie__imdbButton {
+  background-color:#f3ce13;
+}
+
+.newTab {
+  margin-left: 1.4rem;
+}
+
+.movie__production {
+  width: 85%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 4rem;
+}
+
+
+.movie__productionComapany {
+  width: 200px;
+  margin: 2rem;
+}
+
+.productionCompanyImage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
